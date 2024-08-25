@@ -34,7 +34,7 @@
     
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/css/bootstrap-switch-button.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/dist/bootstrap-switch-button.min.js"></script>
-    <title>Document</title>
+    <title>Home Dashboard</title>
     <link rel="stylesheet" href="./assets/style/admin_dashboard.css">
 
     

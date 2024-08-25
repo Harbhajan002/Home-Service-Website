@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./assets/style/desgin.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <title>Document</title>
+    <title>Homeease</title>
 
 </head>
 
