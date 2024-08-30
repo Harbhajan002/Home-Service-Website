@@ -1,5 +1,18 @@
 
 <?php include("header.php");?>
+
+<div class="slider">
+    <video autoplay muted playsinline loop src="https://wedesignthemes.s3.amazonaws.com/mezan/Mezan+VD+Work+5mb.mp4"
+    style="width: 1351.11px; height: 760px;"></video>
+    <div class="textarea">
+      <p>Let’s get to work</p>
+
+       <h2 class="slog"><span>HomeEase</span> to the highest standards.</h2>
+    </div>
+
+</div>
+
+
     <nav id="nav">
         <div class="slider">
             <img src="./assets/image/slider.png" alt="">

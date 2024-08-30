@@ -140,15 +140,15 @@ display: flex;
 }
 .textarea {
     position: absolute;
-    top: 100px;
-    left: 20%;
-    font-size: 40px;
-
+    top: 250px;
+    left: 5%;
+    font-size: 35px;
+    width: 50%;
     z-index: 5;
     /* Ensure the background color is below the text */
     color: rgb(27, 4, 95);
 }
-.slog span {
+.slog span, .textarea p {
     color: white;
 
 }
