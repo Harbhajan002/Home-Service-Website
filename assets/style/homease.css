@@ -1,3 +1,8 @@
+header .sticky{
+    position: fixed;
+    top: 0;
+    transition: top 0.3s ease-in-out; /* Smooth transition for top property */
+}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -19,4 +24,77 @@
 .nav .social_icon i{
     padding-left: 20px;
     font-size: 18px;
+}
+.choose{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;   
+    padding-top: 50px;
+}
+ .who-we{
+    display: inline;
+    font-size: 30px;
+    color: rgb(27, 4, 95);
+}
+ span i{
+    font-size: 24px;
+    color: rgb(249, 214, 17);
+    padding: 0px 15px;
+    font-weight: 100;
+}
+.choose-category{
+    display: flex;
+   padding: 40px;
+    justify-content: space-between;
+}
+.image-section{
+    border: 1px solid rgb(112, 112, 112); 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 30%;
+   padding: 20px;
+
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.feature-section{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+   justify-content: space-evenly;
+}
+.feature-section .row{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+
+}
+.feature-section .feature{
+    position: relative;
+    border: 1px solid rgb(112, 112, 112); 
+    text-align: center;
+    width: 400px;
+    padding: 30px 20px 20px 20px;
+    margin: 20px;   
+}
+.feature:hover{
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.5);
+}
+.feature i{
+    position: absolute;
+    padding: 30px;
+    border-radius: 50%;
+    border: 1px solid;
+    top: -45px;
+    left: 35%;
+    font-size: 30px;
+    background-color: #fff;
+}
+.feature i:hover{
+    background-color: #ffc527;
 }

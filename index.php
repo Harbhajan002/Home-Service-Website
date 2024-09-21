@@ -3,7 +3,7 @@
 
 <div class="slider">
     <video autoplay muted playsinline loop src="https://wedesignthemes.s3.amazonaws.com/mezan/Mezan+VD+Work+5mb.mp4"
-    style="width: 1351.11px; height: 760px;"></video>
+    style="width: 100%;  "></video>
     <div class="textarea">
       <p>Let’s get to work</p>
 
@@ -13,18 +13,64 @@
 </div>
 
 
-    <nav id="nav">
-        <div class="slider">
-            <img src="./assets/image/slider.png" alt="">
-            <div class="textarea">
-                <h2 class="slog"><span>HomeEase</span> to the highest standards.</h2>
-            </div>
+   <!--new section  -->
+   <div class="choose">
+   <span><i class="fa fa-thin fa-t fa-rotate-90"></i>
+   <h2 class="who-we">Why Choose Us</h2><i class="fa fa-thin fa-t fa-rotate-270"></i></span>
+    <p>Lorem ipsum dolors architecto animi nemo iusto, quaerat aliquam velit fugiat rem.    </p>
+
+    <div class="choose-category">
+        <div class="image-section">
+            <img src="./assets/image/who_we_img.png" alt="choose">
+            <h2 >who we are</h2>
+            <p>Proin gravida nibh vel velit auctor aliquet. ean sollicitudin, lorem quis bibendu ipsum, nec sagittis sem nibh Duis sed odio sit.
+
+Proin gravida nibh vel velit auctor aliquet. ean solly, Duis sed sollicitudin odio sitnibh</p>
+            <button>Get a Quote</button>
         </div>
-    </nav>
+        <div class="feature-section">
+            <div class="row">
+          <div class="feature">
+          <i class="fa fa-sharp fa-thin fa-bug"></i><br>
+
+            <h2>Fast pest removal</h2>
+            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean lorem quis bibendum lorem quis.
+             </p>
+          </div>
+          <div class="feature">
+          <i class="fa fa-sharp fa-thin fa-bug"></i><br>
+          
+            <h2>Fast pest removal</h2>
+            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean lorem quis bibendum lorem quis.
+             </p>
+          </div>
+          </div>
+     <div class="row">
+
+          <div class="feature">
+          <i class="fa-duotone fa-solid fa-id-card"></i><br>
+            <h2>Fast pest removal</h2>
+            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean lorem quis bibendum lorem quis.
+             </p>
+          </div>
+
+          <div class="feature">
+          <i class="fa fa-solid fa-leaf"></i><br>
+            <h2>Fast pest removal</h2>
+            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean lorem quis bibendum lorem quis.
+             </p>
+          </div>
+</div >
+
+        </div>
+    </div>
+   </div>
+
 
     <div id="servicecontent">
         <div class="servicecontent">
-            <h2>Our  Services</h2>
+        <span><i class="fa fa-thin fa-t fa-rotate-90"></i>
+        <h2 class="who-we">Our Services</h2><i class="fa fa-thin fa-t fa-rotate-270"></i></span>
         </div>
         <!-- service card start-->
         <div id='servicecard'>

@@ -30,9 +30,15 @@
         </div>
     </footer>
     <script>
-    // <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/dist/bootstrap-switch-button.min.js"></script>
-
+    window.addEventListener("scroll", function () {
+        var header= document.querySelector(".head");
+        console.log("header"+header);
+        
+        header.classList.toggle("sticky", window.scrollY > 40 );
+    });
+     
     </script>
+  
     </body>
 
 </html>
