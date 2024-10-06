@@ -23,7 +23,7 @@ include("dashboard_header.php");
                     </div>
                     
 
-
+                    
                     <!-- service filter -->
                     <select name="select_service" id="search_service" class="select_service">
                       <option value="">Select Service</option>
@@ -68,6 +68,7 @@ include("dashboard_header.php");
 
     <script>
         $(document).ready(function () {
+            $('#dashboard').addClass('active_nav'); 
             //customer message with paging.php
             function loadTable(pageno) {
                 console.log("dashboard", pageno);

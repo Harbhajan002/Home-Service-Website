@@ -12,12 +12,13 @@ if (isset($_GET['id'])) {
    $detail= $_POST['detail'];
 
    // select db all gallery image
-   $database=$connect->prepare('select gallery from service where service_name=?');
+   $database=$connect->prepare('Select gallery from service where service_name=?');
         $database->bind_param('s',$service_name);
         $database->execute();
         $result=$database->get_result();
         $row=$result->fetch_assoc();
         $gallery_image_json=$row['gallery'];
+        echo $gallery_image_json;
         $image_array = json_decode($gallery_image_json, true) ?? [];
       
 // select gallery image for delete via checked input
@@ -25,10 +26,11 @@ if (isset($_GET['id'])) {
    $galleryImage= $_POST['checkbox'];
    
       foreach ($galleryImage as $delete_image) {
+
          unlink($delete_image);
+         print_r($delete_image);
          $key = array_search($delete_image, $image_array);
          unset($image_array[$key]);
-         
         
       }
       $image_array = array_values($image_array);
@@ -36,7 +38,7 @@ if (isset($_GET['id'])) {
      
    }
   
-  
+//   die();
    // main image
    if ( isset($_FILES['service_img'])) {
     // image name
@@ -63,7 +65,8 @@ if (isset($_GET['id'])) {
       $gallery_path = "assets/image/" . $gallery_img_name;
 
       move_uploaded_file($gallery_tmp_name, $gallery_path);
-     $image_array[] = $gallery_path;
+   //   $image_array[] = $gallery_path;
+     $image_array[] = $gallery_img_name;
      }
      
   }
@@ -110,7 +113,7 @@ if (isset($_GET['id'])) {
               foreach ($images as $i) {
                  ?>
               <input type="checkbox" name="checkbox[]"  value="<?=$i ?>">
-             <img src="<?= $i ?>" style="width:40px;height:40px;" alt="">
+             <img src="assets/image/<?= $i ?>" style="width:40px;height:40px;" alt="">
              <?php 
               } ?>
            </div>

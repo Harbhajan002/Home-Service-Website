@@ -6,13 +6,10 @@ td img{
 </style>
 <?php
 include("dashboard_header.php");
+include("navigation.php");
+
 ?>
 
-<div class="inner_parent">
-
-    <?php
-        include("navigation.php");
-        ?>
    <div class="a3" id="service">
 <?php
         include("conn.php");
@@ -93,11 +90,11 @@ include("dashboard_header.php");
         </table>
     </div>
 </div>
-</div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 <script>
  $(document).ready(function () {
+    $('#service_list').addClass('active_nav'); 
    
     $(".changestatus").change(function () {
         let service_id=$(this).attr('attr-service-id');

@@ -44,7 +44,7 @@
         $gallery_array=json_decode($gallery);
         foreach ($gallery_array as $single_image) {
           ?>
-          <img src="<?= $single_image ;?>" alt="">
+          <img src="assets/image/<?= $single_image ;?>" alt="">
            <?php
         }
           ?>

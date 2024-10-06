@@ -37,22 +37,19 @@
     <title>Home Dashboard</title>
     <link rel="stylesheet" href="./assets/style/admin_dashboard.css">
 
-    
-
-
 </head>
-<body id="sid">
+<body >
     <div class="dashboard">
       <div class="a1">
+        <div class="box-a">
+            <img src="assets/image/dashboard-logo.png" alt="logo"> 
             <h2>Admin Dashboard </h2>
-            <div class="mid_task">
-                <h3>Welcome
-                    <?=$name?>
-                </h3>
-                <div class="admin_profile" id="update">
-                    <a href="update_profile.php"> <img src="assets/image/<?=$image_path ?>" alt="Admin Profile"></a>
-                </div>
-                <h3><a href="?logout">Log Out</a></h3>
+        </div>
+            <div class="box-a box-b">
+                <h4>Welcome <?=$name?></h4>
+                <a href="update_profile.php"> <img src="assets/image/<?=$image_path ?>" alt="Admin Profile"></a>
+                <i class="fa-solid fa-sun"></i>
+                <h4><a href="?logout">Log Out</a></h4>
             </div>
         </div>
     </div>

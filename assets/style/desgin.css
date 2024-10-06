@@ -377,6 +377,38 @@ form .filed {
 .detail h2{
     font-size:40px;
 }
+.faqs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.faqs h4{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+ h4 span{
+    padding-right: 50px;
+    color: black;
+}
+.faqs h4 span i{
+    color: black;
+    font-size: 15px;
+}
+.arrow{
+    transform: rotate(-180deg);
+}
+.faq-info{
+    display: none;
+}
+.active-faqs{
+    display: block;
+}
+.faqs .inner-details{
+    width: 70%;
+}
 .info-img{
     display:flex;
     justify-content:center;

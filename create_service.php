@@ -27,6 +27,8 @@ include("dashboard_header.php");
 <script>
     // insert service
     $(document).ready(function () {
+        $('#create_service').addClass('active_nav'); 
+
         $('#imageUploadForm').on('submit',(function(e) {
             e.preventDefault();
             var formData = new FormData(this);

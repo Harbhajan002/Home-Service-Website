@@ -23,6 +23,33 @@
         </div>
         </div>
 
+        <!-- faqs section -->
+         <div class="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <div class="inner-details">
+                <div class="accordian">
+                    <h4>What services do you offer? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
+                    <p  class="faq-info"   >We provide a variety of home services, including cleaning, plumbing, electrical work, HVAC maintenance, landscaping, and handyman services.</p>
+                </div>
+
+                <div class="accordian">
+                    <h4>What services do you offer? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
+                    <p  class="faq-info"   >We provide a variety of home services, including cleaning, plumbing, electrical work, HVAC maintenance, landscaping, and handyman services.</p>
+                </div>
+
+                <div class="accordian">
+                    <h4>What services do you offer? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
+                    <p  class="faq-info"   >We provide a variety of home services, including cleaning, plumbing, electrical work, HVAC maintenance, landscaping, and handyman services.</p>
+                </div>
+
+                <div class="accordian">
+                    <h4>What services do you offer? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
+                    <p  class="faq-info"   >We provide a variety of home services, including cleaning, plumbing, electrical work, HVAC maintenance, landscaping, and handyman services.</p>
+                </div>
+            </div>
+   
+         </div>
+
     </div>
     <?php include("footer.php") ?>
 
@@ -32,3 +59,21 @@
         $('#about').addClass('active'); 
     });
 </script>
+<script>
+  const accordions = document.querySelectorAll('.accordian');
+  
+  accordions.forEach((accordion) => {
+    accordion.addEventListener("click", () => {
+      const faqInfo = accordion.querySelector('.faq-info');
+      const iconFaq = accordion.querySelector('.icon-faq');
+
+      if (faqInfo) {
+        // Toggle the class on the specific paragraph
+        faqInfo.classList.toggle('active-faqs');
+        iconFaq.classList.toggle('arrow');
+      }
+    });
+  });
+</script>
+
+

@@ -4,46 +4,57 @@ body {
     padding: 0;
 }
 
-
-
 .a1 {
     width: 100%;
-    height: 100px;
-    background-color: rgb(25, 37, 81);
-    color: white;
+    height: 60px;
+     /* background-color: white; */
+    color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
     justify-content: space-between;
 }
-
-.a1 h2 {
-    padding: 0 50px;
-}
-
-.a1 h3 {
+.box-a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 20px;
+
+}
+.box-a img{
+    height: 45px;
+}
+.box-b{
+    width: 40%;
+    justify-content: end;
+    gap: 20px;
 }
 
-h3 a {
+h4 a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
+    outline: none;
+}
+
+h4 a:hover{
+    outline: none;
+    color: black;
+    text-decoration: none;
 }
 
 .inner_parent {
     display: flex;
     height: auto;
     width: 100%;
-    /* justify-content:center; */
 }
 
 .a2 {
     width: 20%;
     display: flex;
     flex-direction: column;
-    background: rgb(78 89 129);
-    color: white;
+    background: rgb(78, 89, 129);
+    color: rgb(0, 0, 0);
     align-items: center;
     float: left;
 }
@@ -59,17 +70,24 @@ h3 a {
     cursor: pointer;
 }
 
-.a2 h3,
-
-button {
+.a2 h3  , button{
     margin-top: 20px;
     padding: 10px 0;
-    border: 1px solid;
+    border: 1px solid rgb(34, 197, 94);
     width: 90%;
     text-align: center;
     border-radius: 10px;
-    /* border-right: none; */
     cursor: pointer;
+}
+.a2 h3 a{
+    color: #000000;
+    text-decoration: none;
+}
+.a2 h3 a:hover{
+    color: rgb(34, 197, 94);
+}
+.a2 h3 .active_nav{
+    color: rgb(34, 197, 94);
 }
 
 .a2 button {
@@ -100,9 +118,9 @@ button:hover {
 }
 
 .a3 {
-    width: 77%;
-    margin-left: 26px;
-    /* float:right; */
+    background-color: rgb(236, 241, 248);
+    width: 80%;
+    padding:0px 30px;
     padding-bottom: 40px;
 }
 
@@ -158,10 +176,7 @@ li {
 
 }
 
-a {
-    text-decoration: none;
-    color: red;
-}
+
 
 .pageactive {
     background-color: blueviolet;
@@ -169,10 +184,7 @@ a {
 
 }
 
-.mid_task {
-    display: flex;
-    justify-content: center;
-}
+
 
 .multi-filter {
     width: 90%;
@@ -192,6 +204,7 @@ a {
     border: 1px solid;
     width: 20%;
     /* border-right: none; */
+    color: rgb(34, 197, 94);
     cursor: pointer;
 }
 
@@ -199,19 +212,6 @@ a {
     width: 80px;
 }
 
-.admin_profile {
-    margin-right: 20px;
-    width: 72px;
-    height: 57px;
-    border-radius: 50%;
-    overflow: hidden;
-
-}
-
-.admin_profile img {
-    width: 100%;
-    height: auto;
-}
 
 .select_all button {
     width: 100px;

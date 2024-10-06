@@ -89,6 +89,9 @@ include("navigation.php");
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 <script>
+
+$(document).ready(function () {
+    $('#signup').addClass('active_nav'); 
      $("#admin").validate({
         rules:{
             name:"required",
@@ -98,5 +101,6 @@ include("navigation.php");
                 minlength:8
             }
         }
-     })
+     });
+    });
 </script>

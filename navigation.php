@@ -25,13 +25,6 @@
         // print_r($_SESSION['permissions'] );
         echo "<br>";
   
-        
-       
-
-// die();
-
-
-
         // array of permission saprate into single value
         foreach ($permissions as $permission) {
          
@@ -43,7 +36,7 @@
               while ($data=$results->fetch_assoc()) {
                ?>
          <!-- live search input -->
-           <h3 id="dash"><a href="<?=$data['nav_link']?>.php"><?=$data['nav_name']?></a></h3>
+           <h3 ><a id="<?=$data['nav_link']?>" href="<?=$data['nav_link']?>.php"><?=$data['nav_name']?></a></h3>
           
             <?php
               }
@@ -51,10 +44,7 @@
         }
      
       // echo $_SERVER['QUERY_STRING']; use for access get parameter
-     
-
-
-    }
+         }
    }
    ?>
 
