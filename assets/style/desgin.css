@@ -553,31 +553,33 @@ margin-top: 20px;
     /* border-right: none; */
     cursor: pointer;
 }
-.a2 h3,
-
-button {
+.a2 h3 {
     margin-top: 20px;
     padding: 10px 0;
     border: 1px solid;
     width: 90%;
     text-align: center;
     border-radius: 10px;
-    /* border-right: none; */
     cursor: pointer;
 }
-
-.a2 button {
+.btn-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn-section button {
     margin-top: 20px;
-    padding: 10px 0;
-    border: 1px solid;
-    width: 40%;
+    padding: 12px 0px;
+    width: 130px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 25px;
     cursor: pointer;
+    border: none;
+    background-color: #ffc527;
 }
 
-.a2 button:hover {
-    background: rgb(78 89 129);
+.btn-section button:hover {
+    background: rgb(1, 1, 2);
 
     color: #fff;
 

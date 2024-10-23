@@ -11,6 +11,9 @@
     </div>
 
 </div>
+<div class="demo-amination">
+<canvas class="particles-js-canvas-el" width="1908" height="543" style="width: 100%; height: 100%;"></canvas>
+</div>
 
 
    <!--new section  -->
@@ -26,22 +29,27 @@
             <p>Proin gravida nibh vel velit auctor aliquet. ean sollicitudin, lorem quis bibendu ipsum, nec sagittis sem nibh Duis sed odio sit.
 
 Proin gravida nibh vel velit auctor aliquet. ean solly, Duis sed sollicitudin odio sitnibh</p>
-            <button>Get a Quote</button>
+           <div class="btn-section">
+           <button>Get a Quote</button>
+           </div>
+           
         </div>
         <div class="feature-section">
             <div class="row">
           <div class="feature">
           <i class="fa fa-sharp fa-thin fa-bug"></i><br>
 
-            <h2>Fast pest removal</h2>
-            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean lorem quis bibendum lorem quis.
+            <h2>Earliest Consultation</h2>
+            <p>We prioritize your time by offering prompt consultations. Our team is dedicated to understanding 
+                your needs and providing expert advice at the earliest convenience.
              </p>
           </div>
           <div class="feature">
           <i class="fa fa-sharp fa-thin fa-bug"></i><br>
           
-            <h2>Fast pest removal</h2>
-            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean lorem quis bibendum lorem quis.
+            <h2>Customized Solution</h2>
+            <p>Every home is unique. We tailor our services to meet your specific requirements, 
+                ensuring that you receive the best solutions designed just for you.
              </p>
           </div>
           </div>
@@ -49,15 +57,17 @@ Proin gravida nibh vel velit auctor aliquet. ean solly, Duis sed sollicitudin od
 
           <div class="feature">
           <i class="fa-duotone fa-solid fa-id-card"></i><br>
-            <h2>Fast pest removal</h2>
-            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean lorem quis bibendum lorem quis.
+            <h2>Affordable Pricing</h2>
+            <p>Quality services shouldn’t break the bank. We offer competitive pricing options to 
+                ensure you get exceptional value without compromising on quality.
              </p>
           </div>
 
           <div class="feature">
           <i class="fa fa-solid fa-leaf"></i><br>
-            <h2>Fast pest removal</h2>
-            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean lorem quis bibendum lorem quis.
+            <h2>All-In-One Service</h2>
+            <p> From start to finish, we handle everything. Our comprehensive services make it easy 
+                for you to manage your home needs with a single reliable provider.
              </p>
           </div>
 </div >
