@@ -194,7 +194,7 @@ include("dashboard_header.php");
                          url:'all_filter.php',
                          data: {
                         service_id:service_id,
-                        dateRange:dateRange
+                        // dateRange:dateRange
                     },
                         success: function (service_res) {
                            $(".table-data").html(service_res);

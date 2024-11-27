@@ -1,33 +1,67 @@
 
     <!-- footer -->
     <footer>
-    <div class="end">
-        <div class="detial">
-        <div class="c1">
-                <h2 id="home"><a href="index.php">
-                <img src="./assets/image/hhh.png" alt="servicelogo">
-           </a></h2>
-                <p>From repairs to renovations, cleaning to landscaping, 
-                we're here to make your home a haven.</p>
+     <div class="detial">
+        <img class="footer-image" src="./assets/image/footer-image.png" alt="footer-image">
+            <div class="column-section col-1">
+                    <h2><a href="index.php">
+                    <img src="./assets/image/hhh.png" alt="servicelogo">
+                     </a></h2>
+                    <p class="footer-description">
+                    At HomeEase, we offer a wide range of home services, including cleaning, 
+                    plumbing, electrical shifting, and security, across 32+ cities in India. Our 
+                    team of 1,000+ trained professionals is ready to handle all your needs with expertise. 
+                    We focus on delivering convenient, reliable, and top-quality services right to your
+                     doorstep. Customer satisfaction is our top priority, and we strive to exceed expectations. 
+                    Choose HomeEase for exceptional service and the best value for your home.</p>
                 
             </div>
-            <div class="c2">
-            <h2 id="home">Address</h2>
-                <p>23 Bardeshi, Savarr Dhaka 1348</p>
-                <p>hello@homeease.com</p>
-                <p>01234 567 890</p>
+            <div class="column-section ">
+                <h2>Our Services</h2>
+                <?php
+                $service_name = "Select * from service ";
+                $results = $connect->prepare($service_name);
+                $results->execute();
+                $stmt= $results->get_result();
+                if ($stmt->num_rows >0) {
+                   while($data = $stmt->fetch_assoc()){
+                    $services = $data['service_name']; 
+                    $service_id =$data['service_id'];
+                    ?>
+                    <p class="service-desc" data-service-id='<?=$service_id ?>'> >&nbsp  <?= $services ?></p>
+                    <?php
+                   }
+                }
+                ?>
                 
             </div>
-            <div class="c3">
-            <h2 id="contact">Contact</h2>
+            <div class="column-section">
+                <h2>Quick Links</h2>
+                <p> <a href="">>&nbsp About Us</a></p>
+                <p><a href=" ">>&nbsp Privacy Policy</a></p>
+                <p> <a href="">>&nbsp Contact</a></p>
+                <p><a href=""> >&nbsp FAQ's</a></p>
+                <p> <a href="">>&nbsp Terms & Condition</a></p>
+            </div>
+            <div class="column-section">
+                <h2>Contact</h2>
                 <p>123-45-450-450</p>
-                <p>homeease@yahoo.in</p>
+                <p>23 Bardeshi, Savarr Dhaka 1348</p>
                 <p>Insta: @homeease1002</p>
+                <div class="newslatter">
+                    <input type="email" id="newsEmail" placeholder="Email Id" >
+                    <button type="submit" id='subscribe'>Subscribe</button>
+                </div>
+                <div class="credit">
+                    <h2>We Accept</h2>
+                    <img src="./assets/image/credit.png" alt="">
+                </div>
             </div>
-        </div>
+        <img class="footer-image2" src="./assets/image/footer-image.png" alt="footer-image">
+
+    </div>
         <hr>
-        <p class="copy"> Copyright ©2020 Clenify. All Rights Reserved</p>
-        </div>
+        <p class="copy"> Copyright ©2020 HomeEase. All Rights Reserved</p>
     </footer>
     <script>
     window.addEventListener("scroll", function () {
@@ -39,120 +73,29 @@
 
     </script>
   
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="./assets/external/script.js"></script>
 
-
-  <!-- etst case -->
   <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: {
-                    value: 100,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: "#ffffff"
-                },
-                shape: {
-                    type: "circle",
-                    stroke: {
-                        width: 0,
-                        color: "#000000"
-                    },
-                    polygon: {
-                        nb_sides: 5
-                    },
-                    image: {
-                        src: "img/github.svg",
-                        width: 100,
-                        height: 100
-                    }
-                },
-                opacity: {
-                    value: 0.5,
-                    random: false,
-                    anim: {
-                        enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 5,
-                    random: true,
-                    anim: {
-                        enable: false,
-                        speed: 40,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#ffffff",
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 6,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: "repulse"
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: "push"
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 400,
-                        line_linked: {
-                            opacity: 1
-                        }
-                    },
-                    bubble: {
-                        distance: 400,
-                        size: 40,
-                        duration: 2,
-                        opacity: 8,
-                        speed: 3
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4
-                    },
-                    push: {
-                        particles_nb: 4
-                    },
-                    remove: {
-                        particles_nb: 2
-                    }
-                }
-            },
-            retina_detect: true
-        });
-    </script>
-    </body>
+    $(document).ready(function (){
+        $('#subscribe').click( function(){
+          var newsEmail=   $("#newsEmail").val();
+        console.log(newsEmail);
+        if (newsEmail === "") {
+              return;  // Stop the AJAX request from being sent
+          }
 
+        $.ajax({
+                type: 'POST',
+                url: 'news_letter.php',
+                data: { newsEmail: newsEmail }, 
+                success: function (response) {
+                    $(".newslatter").html(response);
+                    console.log("response"+response);
+                }
+            })
+        })
+    })
+  </script>
+</body>
 </html>

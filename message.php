@@ -14,10 +14,9 @@ if ($res->num_rows>0) {
 <?php
 }
 $pageno= isset($_POST['page_no'])?$_POST['page_no']:1;
- echo $pageno;
+//  echo $pageno;
 $offset=($pageno-1)* $limit;
 ?>
-
 <form action="" method="post">
                         <table class="table">
                             <thead>

@@ -14,7 +14,6 @@ header{
     width: 100%;
     justify-content: space-between;
     background-color: rgb(10, 19, 50);
-    padding: 0px 20px;
     transition: top 0.3s ease-in-out; /* Smooth transition for top property */
 }
 .page{
@@ -46,21 +45,8 @@ h2{
 #log:hover{
     text-decoration: underline;
 }
-#nav{
-    /* border: 1px solid; */
-color: rgb(89, 109, 219);
-}
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-#nav {
-    /* height:500px; */
-    margin-bottom:30px;
-    margin-right:10px;
-width: 100%;
-    
-}
+
 
 .logo {
     width: 50px;
@@ -73,10 +59,7 @@ img {
     height: 40px;
 }
 
-.head {
-    background-color: rgb(10, 19, 50);
-    color: #fff;
-}
+
 #servicecontent {
     
     display: flex;
@@ -84,18 +67,7 @@ img {
     align-items: center;
     flex-direction: column;
 }
-.end{
 
-    background-color: rgb(10, 19, 50);
-     color: #fff;
-     display: flex;
-    /* background:red; */
-    flex-direction: column;
-    align-items: center;
-
-    justify-content: space-evenly;
-
-}
 .page{
     padding-right:30px;
 }
@@ -203,19 +175,17 @@ text-decoration: underline;
 }
 #aboutsection{
 display: flex;
-    /* background:red; */
     align-items: center;
     flex-direction: column;
 }
-#contactsection{
+.contactsection{
 display: flex;
-    /* background:red; */
     align-items: center;
     flex-direction: column;
 }
 /* contact.php */
 .signup {
-    margin-top: 150px;
+    margin-top: 80px;
     border-radius: 20px;
     background: transparent;
     backdrop-filter: blur(20px);
@@ -233,6 +203,11 @@ display: flex;
     margin:0 20px;
     flex-direction: column;
 }
+.centre img{
+    height: 100%;
+}
+  /* contact.php */
+    
 
 form {
     display: flex;
@@ -251,6 +226,15 @@ form input{
     /* border-right: none; */
     cursor: pointer;
 }
+
+    textarea{
+    resize: none;
+    }
+    
+    form select {
+    height: 35px;
+    }
+    
 form button {
     height: 35px;
     font-size: 20px;
@@ -271,6 +255,10 @@ form .filed {
 }
 .error{
     color:red;
+}
+.contactsection .map{
+    width: 100%;
+    margin: 80px 0;
 }
 /* service.php */
 .selected-service{
@@ -332,14 +320,14 @@ form .filed {
   .aboutslider {
     position: relative;
     z-index: 3;
-    padding-top:63px;
-    background-color: rgba(255, 255, 255, 0.5);
+    height: 300px;
+
+    background-color: rgba(5, 2, 2, 0.5);
     /* Semi-transparent white */
 }
 
 .aboutslider img {
     width: 100%;
-    height: 300px;
 }
 
 
@@ -351,8 +339,8 @@ form .filed {
     width: 100%;
     height: 100%;
     /* Adjust height as needed */
-    background-color: rgb(95, 94, 94);
-    opacity: 0.4;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
     /* Semi-transparent white */
     z-index: 2;
     /* Ensure the background color is below the text */
@@ -426,55 +414,106 @@ p span{
     font-weight:bold;
 }
 /* footer.php */
-.end{
 
-    background-color: rgb(10, 19, 50);
-     color: #fff;
-     display: flex;
-    /* background:red; */
-    flex-direction: column;
-    align-items: center;
-    
-    justify-content: space-evenly;
-    
-    }
-    
-    .detial{
-    display: flex;
-        /* background:red; */
-        width:100%;
-        align-items: center;
-        justify-content:space-evenly;
-    
-    }
-    hr{
-        width:100%;
-    }
-    .copy{
-        padding:10px;
-    }
-    .c1{
-        width:15%;
-    }
-
-    /* contact.php */
-    .service-name{
-        margin-top:90px;
-
-    }
-    .signup{
-        margin-top:90px;
-        
-    }
-    textarea{
-        resize: none;
-    }
-    .signup{
-        margin-bottom:40px;
-    }
-    form select {
-    height: 35px;
+footer{
+background-color: rgba(7, 17, 52, 0.932);
+color: #fff;
+display: flex;
+flex-direction: column;
+padding-top: 40px;
+position: relative;
 }
+
+.detial{
+display: flex;
+width:100%;
+align-items: start;
+justify-content:space-evenly;
+}
+.detial .footer-image  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 381px;
+    height: auto;
+    opacity: 0.2;
+}
+.detial .footer-image2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 381px;
+    height: auto;
+    opacity: 0.2;
+}
+.detial .column-section{
+    width: 20%;
+    padding: 0 15px;
+    flex: 0 0 auto;
+    z-index: 5;
+
+}
+.detial .col-1{
+    width: 28%;
+
+}
+.detial .column-section p a{
+    color: white;
+}
+.column-section .credit {
+    padding-top: 40px;
+}
+.column-section .credit img{
+  width: 220px;
+  height: auto;
+}
+.service-desc{
+    cursor: pointer;
+}
+.newslatter {
+display: flex ;
+flex-direction: row;
+align-items: center;
+padding-top: 20px;
+}
+.newslatter input, .newslatter button{
+    width: 100px;
+    padding: 10px;
+    border-radius: 4px;
+
+}
+.newslatter button{
+    margin-left: 10px;
+    background: rgb(255, 234, 0);
+    color: black;
+    outline: none;
+    border: none;
+}
+.column-section .footer-description{
+    line-height: 25px;
+}
+.newslatter .news-note{
+    border: 1px solid white;
+    padding: 10px;
+    margin-right: 5px;
+    line-height: 25px;
+}
+
+hr{
+width:100%;
+padding-top: 40px;
+border-top:0px ;
+border-left:0px ;
+border-right:0px ;
+}
+.copy{
+padding:10px;
+text-align: center;
+}
+
+
+  
+
 /* description.php */
  .btn-info{
   padding:10px 40px;

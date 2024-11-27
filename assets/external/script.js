@@ -3,6 +3,8 @@
     $(document).ready(function () {     
      // Load the service form when #data-service-id is clicked
      $(document).on('click', '[data-service-id]', function () {
+      console.log("onlilcik");
+      
             var serviceId = $(this).data('service-id');
             console.log("working",serviceId);
             

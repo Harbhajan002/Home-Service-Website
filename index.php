@@ -11,9 +11,7 @@
     </div>
 
 </div>
-<div class="demo-amination">
-<canvas class="particles-js-canvas-el" width="1908" height="543" style="width: 100%; height: 100%;"></canvas>
-</div>
+
 
 
    <!--new section  -->

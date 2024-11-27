@@ -1,13 +1,13 @@
 
 <?php include("header.php");?>
-    <nav id="nav">
+    <div class="nav-slider">
         <div class="aboutslider">
             <img src="./assets/image/about.jpg" class="about-image" alt="">
             <div class="abouttext">
                 <h2 class="slog"><span>About Us</span></h2>
             </div>
         </div>
-    </nav>
+    </div>
 
     <div class="detail">
      <h2>  Our Values</h2>

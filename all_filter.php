@@ -3,33 +3,38 @@
 include("conn.php");
  $service_id =isset($_POST['service_id'])  ? $_POST['service_id'] : "";
  $dateRange =isset($_POST['dateRange'])  ? $_POST['dateRange'] : "";
+ if (!empty($dateRange)) {
+    $dateParts = explode(" - ", $dateRange);
+    
+    // Check if we have both parts after explode
+    if (count($dateParts) === 2) {
+        $datefrom = trim($dateParts[0]);
+        $dateto = trim($dateParts[1]);
+        echo "Date From: $datefrom<br>";
+        echo "Date To: $dateto<br>";
+    } else {
+        // Handle the case where dateRange is not in the expected format
+        echo "Invalid date range format.";
+        $datefrom = '';
+        $dateto = '';
+    }
+} 
 
- $dateParts = explode(" - ", $dateRange);
- 
- $datefrom = trim($dateParts[0]);
- $dateto = trim($dateParts[1]);
  
  // Assuming the dates are in the format MM/DD/YYYY, you may need to adjust accordingly
- 
- echo "Date From: $datefrom<br>";
- echo "Date To: $dateto<br>";
- 
-echo $service_id;
+ echo "$service_id<br>";
+
  if(!empty($service_id) && !empty($datefrom)  && !empty($dateto)) {
-       
-  
     $record ="SELECT * FROM customer WHERE status_id = FALSE and curr_date between '$datefrom' and '$dateto' and service_id = $service_id ";
-     echo $record;
+        // echo "hello a";
         }else if( !empty($datefrom)  && !empty($dateto)) {
-           
         $record ="SELECT * FROM customer WHERE status_id = FALSE and curr_date between '$datefrom' and '$dateto' ";
-
+        // echo "hello b";
         }else if(!empty($service_id)) {
-           
-            $record = "SELECT * FROM customer where  status_id = FALSE and  service_id = $service_id ";
-
+        $record = "SELECT * FROM customer where  status_id = FALSE and  service_id = $service_id ";
+        // echo "hello c";
         }else{
-            echo "Please Select Any Fliter"; ?>
+        echo "Please Select Any Fliter"; ?>
          <?php   exit();
         }
 

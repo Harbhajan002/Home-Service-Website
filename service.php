@@ -37,8 +37,8 @@
    <!--  -->
    <?php include("footer.php") ?>
     
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="./assets/external/script.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="./assets/external/script.js"></script> -->
 <script>
     $(document).ready(function () {
         $('#service').addClass('active'); 
