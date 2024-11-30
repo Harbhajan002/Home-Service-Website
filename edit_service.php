@@ -1,80 +1,96 @@
 <?php
 include("conn.php");
 include("dashboard_header.php");
+
 if (isset($_GET['id'])) {
   $serviceId= $_GET['id'];
+
   // update isactive status
    if ($_SERVER['REQUEST_METHOD']=='POST') {
-   
    $service_name= $_POST['service_name'];
    $Shot_desc= $_POST['shot_desc'];
    $prize= $_POST['prize'];
    $detail= $_POST['detail'];
 
-   // select db all gallery image
-   $database=$connect->prepare('Select gallery from service where service_name=?');
+    // Fetch gallery images from the database
+   $database=$connect->prepare('Select gallery , service_image from service where service_name=?');
         $database->bind_param('s',$service_name);
         $database->execute();
         $result=$database->get_result();
         $row=$result->fetch_assoc();
         $gallery_image_json=$row['gallery'];
-        echo $gallery_image_json;
+        $service_image_path=$row['service_image'];
+        echo "$service_image_path";
         $image_array = json_decode($gallery_image_json, true) ?? [];
-      
-// select gallery image for delete via checked input
+        echo "<pre>";
+        print_r( $image_array);
+        echo "</pre>";
+
+
+  // Delete selected gallery images if checked
    if (isset( $_POST['checkbox'])) {
    $galleryImage= $_POST['checkbox'];
-   
       foreach ($galleryImage as $delete_image) {
+               // Check if the file exists before unlinking
+               $file_path = "./assets/image/$delete_image";
+               if (file_exists($file_path)) {
+                  unlink($file_path);
+                  echo "Deleted file: $file_path<br>";
 
-         unlink($delete_image);
-         print_r($delete_image);
-         $key = array_search($delete_image, $image_array);
-         unset($image_array[$key]);
-        
+                  // Remove the image from the array
+                  $key = array_search($delete_image, $image_array);
+                  if ($key !== false) {
+                  unset($image_array[$key]);
+                  }
+               } else {
+                  echo "File does not exist: $file_path<br>";
+               }
       }
+       // Reindex the array to fix the keys after unset
       $image_array = array_values($image_array);
         
      
    }
   
 //   die();
-   // main image
+    // Handle main image upload
    if ( isset($_FILES['service_img'])) {
-    // image name
         $img_name=$_FILES['service_img']['name'];
-        // image folder name
         $img_folder=$_FILES['service_img']['tmp_name'];
-        // image folder name with image name
         $img_path = "assets/image/".$img_name;
-         move_uploaded_file($img_folder, $img_path);
+
       if ( move_uploaded_file($img_folder, $img_path)) {
-        echo "inserted main image";
+         echo "Main image uploaded: $img_path<br>";
       }else{
-         echo "not inserted";
+         echo "Main image upload failed.<br>";
+        $img_path = $service_image_path;
+
       }
 
     }
 
-   //  gallery images
-   //  $image_array = array(); 
+    // Handle gallery images upload
     if ( isset($_FILES['gallery'])) {
      foreach ($_FILES['gallery']['name'] as $key => $value) {
       $gallery_img_name=$_FILES['gallery']['name'][$key];
       $gallery_tmp_name = $_FILES['gallery']['tmp_name'][$key];
       $gallery_path = "assets/image/" . $gallery_img_name;
 
-      move_uploaded_file($gallery_tmp_name, $gallery_path);
-   //   $image_array[] = $gallery_path;
-     $image_array[] = $gallery_img_name;
+      if (move_uploaded_file($gallery_tmp_name, $gallery_path)) {
+         echo "Gallery image uploaded: $gallery_path<br>";
+         $image_array[] = $gallery_img_name;
+       } else {
+         echo "Gallery image upload failed for: $gallery_img_name<br>";
+       }
      }
      
   }
-  echo "<pre>";
-  print_r($image_array);
-  echo "</pre>";
+  // Convert the updated image array to JSON
   $gallery_json = json_encode($image_array);
+  echo "Updated gallery: $gallery_json<br>";
+    
 
+  // Update the service in the database
      $updateService="UPDATE service SET service_name= ?, service_image=?, service_description=?, gallery=?, prize=?, service_detail=? where service_id = ?";
   $stmt= $connect->prepare($updateService);
   $stmt->bind_param("ssssssi",$service_name, $img_path, $Shot_desc, $gallery_json, $prize, $detail , $serviceId);
@@ -106,6 +122,7 @@ if (isset($_GET['id'])) {
             <div> Service Name<input type="text" id="name" name="service_name" value="<?= $data['service_name'];?>"  /><br>
              Shot Description<textarea name="shot_desc" id="Shot" cols="30" rows="10" ><?= $data['service_description'];?></textarea></div>
              <div class="gallery-div">
+             <p>If you delete any service gallery photo then check here...</p>
 
               <?php
                $images= json_decode($data['gallery']);

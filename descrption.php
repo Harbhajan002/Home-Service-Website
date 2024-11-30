@@ -21,7 +21,6 @@
           $image =$data['service_image'];
           $service_desc =$data['service_description'];
           $gallery =$data['gallery'];
-          
           $prize =$data['prize'];
           $service_detail =$data['service_detail'];
         ?>
@@ -33,6 +32,7 @@
           </div>
     </div>
     <div class="desc">
+      <p><?= $service_desc ?></p>
       <p><?= $service_detail ?></p>
       <button type="submit"class="btn-info" ><a href='contact.php? serviceId=<?=md5($sid)?>'> Get A Quote</a></button>
     </div>

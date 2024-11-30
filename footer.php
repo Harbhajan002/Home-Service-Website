@@ -37,11 +37,11 @@
             </div>
             <div class="column-section">
                 <h2>Quick Links</h2>
-                <p> <a href="">>&nbsp About Us</a></p>
-                <p><a href=" ">>&nbsp Privacy Policy</a></p>
-                <p> <a href="">>&nbsp Contact</a></p>
-                <p><a href=""> >&nbsp FAQ's</a></p>
-                <p> <a href="">>&nbsp Terms & Condition</a></p>
+                <p> <a href="about.php">>&nbsp About Us</a></p>
+                <p><a href="privacy-policy.php ">>&nbsp Privacy Policy</a></p>
+                <p> <a href="contact.php">>&nbsp Contact</a></p>
+                <p><a href="about.php"> >&nbsp FAQ's</a></p>
+                <p> <a href="term&condition.php">>&nbsp Terms & Condition</a></p>
             </div>
             <div class="column-section">
                 <h2>Contact</h2>
@@ -71,7 +71,35 @@
         header.classList.toggle("sticky", window.scrollY > 40 );
     });
 
-    </script>
+
+    // hambergan menu
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger");
+    const sideMenu = document.getElementById("side_menu");
+
+    // Toggle sidebar visibility on hamburger click
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle('cross');
+        sideMenu.classList.toggle('open');
+    });
+
+    // Get all anchor tags inside the side menu
+    const menuLinks = sideMenu.querySelectorAll('a');
+    console.log(menuLinks);  // Check if it correctly selects the anchor tags
+
+    // Add click event to each anchor tag
+    menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            // Hide the sidebar after clicking a link
+            hamburger.classList.remove('cross');
+
+            sideMenu.classList.add('open');  // Use remove instead of add
+            console.log("Link clicked and sidebar hidden");
+        });
+    });
+});
+
+</script>
   
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="./assets/external/script.js"></script>

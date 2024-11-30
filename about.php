@@ -2,7 +2,7 @@
 <?php include("header.php");?>
     <div class="nav-slider">
         <div class="aboutslider">
-            <img src="./assets/image/about.jpg" class="about-image" alt="">
+            <img src="./assets/image/about-2.jpg" class="about-image" alt="">
             <div class="abouttext">
                 <h2 class="slog"><span>About Us</span></h2>
             </div>
@@ -28,23 +28,31 @@
             <h2>Frequently Asked Questions</h2>
             <div class="inner-details">
                 <div class="accordian">
-                    <h4>What services do you offer? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
-                    <p  class="faq-info"   >We provide a variety of home services, including cleaning, plumbing, electrical work, HVAC maintenance, landscaping, and handyman services.</p>
+                    <h4>How long does carpet take to dry? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
+                    <p  class="faq-info"   >It depends on the type of Carpet. Big, open of areas of carpet can easily be dry within 30 minutes using our low moisture system but smaller areas will take longer. If ‘steam’ cleaning is used, drying times are extended and will take up to 24 hours to dry fully.</p>
                 </div>
 
                 <div class="accordian">
-                    <h4>What services do you offer? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
-                    <p  class="faq-info"   >We provide a variety of home services, including cleaning, plumbing, electrical work, HVAC maintenance, landscaping, and handyman services.</p>
+                    <h4>How safe are your cleaning chemicals? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
+                    <p  class="faq-info"   >All general cleaning chemicals used by Safaiwale conform to the highest standards of safety and are chosen for their suitability in your home where children or pets are present and not on cost. Unlike ‘one man band’ operations, we also have to consider the safety and welfare of our staff because 
+                        of their continual exposure to the products we use.</p>
                 </div>
 
                 <div class="accordian">
-                    <h4>What services do you offer? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
-                    <p  class="faq-info"   >We provide a variety of home services, including cleaning, plumbing, electrical work, HVAC maintenance, landscaping, and handyman services.</p>
+                    <h4>Do you guarantee you work? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
+                    <p  class="faq-info"   >Yes. Every job carried out by Safaiwale, 100% money back guarantee.</p>
                 </div>
 
                 <div class="accordian">
-                    <h4>What services do you offer? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
-                    <p  class="faq-info"   >We provide a variety of home services, including cleaning, plumbing, electrical work, HVAC maintenance, landscaping, and handyman services.</p>
+                    <h4>What kind of system do you use? <span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
+                    <p  class="faq-info"   >Our company uses both hot water extraction ‘steam cleaning’ and low moisture cleaning. (Much more information is available in our consumer guide.) Despite many misleading claims, no single system is suitable for all carpets and we will always pick the system that will achieve the best result for you. Our advice to consumers is never to get 
+                        ‘hung up’ on the system. The operator is far more important and you’re covered by our money back guarantee.</p>
+                </div>
+
+                <div class="accordian">
+                    <h4>Are you insured?<span ><i class="icon-faq fa-solid fa-caret-down"></i></span></h4> <hr>
+                    <p  class="faq-info">Yes we are insured. All businesses are required by law to carry public liability insurance. This means if you trip over a cable and break your neck, you’ll
+                         be covered. We go a step further and are covered for ‘goods worked on’. This is expensive and few cleaning companies have this. For us and our client’s peace of mind, we are covered for damage to your possessions.</p>
                 </div>
             </div>
    

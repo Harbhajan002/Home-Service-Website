@@ -4,84 +4,68 @@ body{
 }
 header{
     width: 100%;
-    }
-    
-    
+    position: relative;
+    z-index: 100;
+    }  
 .head{
     z-index: 7;
-   
     display: flex;
     width: 100%;
     justify-content: space-between;
     background-color: rgb(10, 19, 50);
     transition: top 0.3s ease-in-out; /* Smooth transition for top property */
+    align-items: center;
 }
-.page{
+.head .page{
     display: flex;
     width: 45%;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 40px;
 }
-.logo{
-    width: 20%;
+header .hamburger {
+    display: none;
 }
-h2{
-    cursor: pointer;
-    
-}
-#home{
-    cursor: pointer;
- font-family:Arial, Helvetica, sans-serif;
-}
-
-#home:hover{
-    text-decoration: underline;
-}
-#service:hover{
-    text-decoration: underline;
-}
-#contact:hover{
-    text-decoration: underline;
-}
-#log:hover{
-    text-decoration: underline;
-}
-
-
-
-.logo {
+.head .logo{
     width: 50px;
     height: 60px;
-    padding: 10px 0px 0px 20px;
+    padding: 10px 0px 0px 30px;
 }
-
-img {
+.head .logo img {
     width: 140px;
     height: 40px;
 }
+.page a , .side-menu a{
+    color: #fff;
 
+}
+.page a h2{
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-style: normal;
+    cursor: pointer;
 
+}
+/* h2{
+    color: #fff;
+} */
+/* #home, #about, #service, #contact{
+    color: red;
+} */
+
+.active {
+    color: rgb(255, 149, 0);
+    }
+/* other content */
 #servicecontent {
-    
     display: flex;
     width: 100%;
     align-items: center;
     flex-direction: column;
+    margin-top: 50px;
 }
-
-.page{
-    padding-right:30px;
-}
-.page a{
-    text-decoration: none;
-color: #fff;
-}
-.detial{
-display: flex;
-    /* background:red; */
-    align-items: center;
-
-}
-
 
 .slider {
     position: relative;
@@ -95,7 +79,9 @@ display: flex;
     width: 100%;
     height: 400px;
 }
-
+.slider video{
+    width: 100%;
+}
 
 .slider::before {
     content: "";
@@ -125,54 +111,49 @@ display: flex;
     color: white;
 
 }
+/* service.php */
 .servicecontent{
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
 }
-.card {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+#serviceparent{
+    margin-top:80px;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    justify-content:center;
+  }
+#servicecard {
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+    gap:20px;
+    width: 100%;
+   margin-bottom:60px;
 
-    width: 19rem;
+}
+.card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+    width: 20%;
    border: 2px solid #605f5f;
-   border-radius:10px;
    cursor: pointer;
 }
 .card img{
     width: 100%;
     height:200px;
-   border-radius:10px;
 
 }
-.card h3{
-    margin-left :40px;
-}
+
 .card p{
     margin :0px 20px 20px 20px;
 
 }
-#servicecard {
-    display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-    gap:30px;
-   margin-bottom:60px;
 
-}
-#serviceparent{
-    margin-top:80px;
-    border: 2px solid rgba(16, 16, 75);
-    display:flex;
-    flex-wrap:wrap;
-    padding:0 40px;
-    flex-direction:column;
-    justify-content:center;
-  }
 
-.active {
-color: red;
-text-decoration: underline;
-}
+
 #aboutsection{
 display: flex;
     align-items: center;
@@ -187,24 +168,32 @@ display: flex;
 .signup {
     margin-top: 80px;
     border-radius: 20px;
-    background: transparent;
-    backdrop-filter: blur(20px);
+
     display: flex;
-    align-items: center;
+    align-items: end;
     width:90%;
-    justify-content: space-evenly;
-    border: 2px solid rgba(16, 16, 75);
+    justify-content: space-between;
+    border: 2px solid #07006f1f;
+    flex-wrap: wrap;
 }
 
 .centre {
     display: flex;
     align-items: center;
-    width: 40%;
-    margin:0 20px;
+    width: 55%;
+    height: 100%;
     flex-direction: column;
+    border-radius: 20px;
+    background-color: #eaeaea94;
+
+}
+.center-c2{
+    background-color: #fff;
+    width: 45%;
 }
 .centre img{
     height: 100%;
+    width: 100%;
 }
   /* contact.php */
     
@@ -212,44 +201,58 @@ display: flex;
 form {
     display: flex;
     justify-content: center;
-    /* padding: 20px; */
     flex-direction: column;
     width: 80%;
 }
-form input{
-    height: 30px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    border: 1px solid;
+form .form-inner-content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     width: 100%;
-    border-radius: 10px;
-    /* border-right: none; */
-    cursor: pointer;
+}
+form .form-inner-content div{
+    width: 45%;
 }
 
+
+form input, form select {
+    height: 40px;
+    margin: 20px 0;
+    border: 1px solid;
+    width: 100%;
+    padding-left: 10px;
+
+    border-radius: 20px;
+    cursor: pointer;
+    /* padding: 10px; */
+}
     textarea{
     resize: none;
+    border-radius: 20px;
+    border: 1px solid;
+    padding: 20px;
+    margin-top: 20px;
     }
     
-    form select {
-    height: 35px;
-    }
     
+    form .form-sub-btn{
+        display: flex;
+justify-content: center;
+margin-bottom: 20px;
+
+ } 
 form button {
-    height: 35px;
+    height: auto;
     font-size: 20px;
-    background-color: rgb(25, 37, 81);
- border:1px solid;
- padding:1px;
+    background-color: rgb(7, 42, 169);
+ border:none;
+ outline: none;
+ padding:10px 20px;
  color:white;
-    width:140px;
     cursor: pointer;
-    border-radius:6px;
-    margin-left:70px;
+    border-radius:20px;
 }
-form button:hover{
-    border:2px solid  rgb(25, 37, 81);
-}
+
 form .filed {
     padding-top: 20px;
 }
@@ -271,7 +274,7 @@ form .filed {
     padding: 40px 50px;
     justify-content: space-between;
     border: 2px solid rgba(16, 16, 75);
-
+  flex-wrap: wrap;
   }
 
   .desc {
@@ -281,7 +284,7 @@ form .filed {
  .desc p{
   font-size:20px;
  }
-  .img {
+ .serviceparent .img {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -308,13 +311,14 @@ form .filed {
   .gallery-img {
     display: flex;
     justify-content: space-evenly;
-    height: 220px;
+    height: 100%;
+    flex-wrap: wrap;
   }
 
   .gallery-img img {
     width: 210px;
-    margin: 0px 30px;
-    height: 100%;
+    margin: 20px 10px;
+    height: 220px;
   }
   /* about.php */
   .aboutslider {
@@ -347,9 +351,9 @@ form .filed {
 }
 .abouttext {
     position: absolute;
-    top: 100px;
-    left: 42%;
-    font-size: 40px;
+    top: 80px;
+    left: 40%;
+    font-size: 28px;
     z-index: 5;
     /* Ensure the background color is below the text */
     color: rgb(27, 4, 95);
@@ -371,6 +375,9 @@ form .filed {
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+.faqs h2{
+    color: rgb(20, 40, 123);
 }
 .faqs h4{
     width: 100%;
@@ -399,13 +406,17 @@ form .filed {
 }
 .info-img{
     display:flex;
-    justify-content:center;
+    justify-content:space-evenly;
     align-items:center;
     border:1px solid;
+    flex-wrap: wrap;
 }
 .info-img img{
     width:300px;
     height:300px;
+}
+.info-img .info{
+   width: 50%;
 }
 .about-image{
     height:100%;
@@ -429,6 +440,7 @@ display: flex;
 width:100%;
 align-items: start;
 justify-content:space-evenly;
+flex-wrap: wrap;
 }
 .detial .footer-image  {
     position: absolute;
@@ -459,6 +471,10 @@ justify-content:space-evenly;
 }
 .detial .column-section p a{
     color: white;
+}
+.detial .column-section h2 img{
+ width: 140px;
+ height: 40px;
 }
 .column-section .credit {
     padding-top: 40px;
@@ -499,7 +515,7 @@ padding-top: 20px;
     line-height: 25px;
 }
 
-hr{
+footer hr{
 width:100%;
 padding-top: 40px;
 border-top:0px ;
@@ -516,12 +532,14 @@ text-align: center;
 
 /* description.php */
  .btn-info{
-  padding:10px 40px;
-  font-size:20px;
-  border:none;
-  border-radius:10px;
-  background-color: rgb(10, 19, 50);
-  width: 30%;
+  font-size: 20px;
+    background-color: rgb(7, 42, 169);
+    border: none;
+    outline: none;
+    padding: 10px 40px;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
  }
  .btn-info a{
   text-decoration:none;
@@ -671,7 +689,7 @@ th {
     margin-left: 250px;
 }
 
-li {
+.pagelist li {
     padding: 10px;
     border: 1px solid;
     margin: 40px 10px;

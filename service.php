@@ -1,10 +1,16 @@
 
 <?php include("header.php");?>
-    <div id="serviceparent">
-    
-        <div class="servicecontent">
-            <h2>Our  Services</h2>
+<nav class="nav-slider">
+        <div class="aboutslider">
+            <img src="./assets/image/banner.jpg" class="about-image" alt="">
+            <div class="abouttext">
+                <h2 class="slog"><span>Services</span></h2>
+            </div>
         </div>
+    </nav>
+    <div id="serviceparent">
+   
+       
         <!-- service card start-->
         <div id='servicecard'>
         <?php
@@ -22,11 +28,10 @@
           $s_description =$data['service_description'];
           ?>
           <div class='card' data-service-id='<?=$service_id ?>'>
+          <h3 class='card-title'><?=$service_name?></h3>
+
            <img src='<?= $image ?>' class='card-img-top'>
-              <div class='card-body'>
-                  <h3 class='card-title'><?=$service_name?></h3>
-                  <p class='card-text'><?=$s_description?>.</p>
-              </div>
+              
           </div>
      <?php
           }

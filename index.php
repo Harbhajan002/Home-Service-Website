@@ -2,8 +2,9 @@
 <?php include("header.php");?>
 
 <div class="slider">
+
     <video autoplay muted playsinline loop src="https://wedesignthemes.s3.amazonaws.com/mezan/Mezan+VD+Work+5mb.mp4"
-    style="width: 100%;  "></video>
+    ></video>
     <div class="textarea">
       <p>Let’s get to work</p>
 
@@ -85,7 +86,7 @@ Proin gravida nibh vel velit auctor aliquet. ean solly, Duis sed sollicitudin od
         <?php
         include("conn.php");
 
-         $servicecard="SELECT * from service where isactive = true  limit 4";
+         $servicecard="SELECT * from service where isactive = true  limit 8";
          $res=$connect->prepare($servicecard);
          $res->execute();
           $stmt=$res->get_result();                
@@ -94,14 +95,12 @@ Proin gravida nibh vel velit auctor aliquet. ean solly, Duis sed sollicitudin od
           $service_id =$data['service_id'];
           $service_name =$data['service_name'];
           $image =$data['service_image'];
-          $s_description =$data['service_description'];
           ?>
           <div class='card' data-service-id='<?=$service_id ?>'>
+          <h3 class='card-title'><?=$service_name?></h3>
+
            <img src='<?= $image ?>' class='card-img-top'>
-              <div class='card-body'>
-                  <h3 class='card-title'><?=$service_name?></h3>
-                  <p class='card-text'><?=$s_description?>.</p>
-              </div>
+              
           </div>
      <?php
           }

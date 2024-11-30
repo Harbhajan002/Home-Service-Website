@@ -15,11 +15,17 @@
 <div class="signup">
 <div class="centre">
 
-    <h2>Registration</h2>
+    <h2>Get In Touch</h2>
 
         <form action="" method="post" id="contact_user">
-            <!-- select service -->
-                <select name="service" id="service_id">
+          <div class="form-inner-content">
+            <div>
+            <input type="text" id="username" name="uname" required placeholder="Name">
+            <span class="error"><?php echo $nameErr; ?></span>
+            </div>
+            <div>
+ <!-- select service -->
+ <select name="service" id="service_id">
                   <option value="">Select option</option>
                   <?php
                         
@@ -48,22 +54,31 @@
                 </select><br>
             <!-- contact detail -->
 
-            <input type="text" id="username" name="uname" required placeholder="Name">
-            <span class="error"><?php echo $nameErr; ?></span>
+            </div>
+           
+          </div>
             
+          <div class="form-inner-content">
+            <div>
             <input type="email" id="mail" name="mail" placeholder="E-mail" >
+              
+            </div>
+           <div>
+           <input type="number" id="number" name="phone" placeholder="Number"  >
 
-            <input type="text" id="number" name="phone" placeholder="Number"  >
-
+           </div>
+           </div>
             <textarea name="message" id="message" cols="10" rows="10" placeholder="Message" ></textarea>
             <br>
             <p id="customer_res"></p>
-            <button type="button" id="btn_submit">Get In Touch</button><br>
+            <div class="form-sub-btn">
+            <button type="button" id="btn_submit">Submit Message</button>
+            </div>
         </form>
 
     </div>
-    <div class="centre">
-        <img src="./assets/image/service-1.jpg" alt="">
+    <div class="centre center-c2">
+        <img src="./assets/image/contact-01.jpg" alt="">
     </div>
 </div>
 <div class="map">
@@ -83,9 +98,8 @@
 
 <script>
     $(document).ready(function () {
- 
-
         $('#contact').addClass('active'); 
+
         $("#btn_submit").click(function () {
                 var service_id = $('#service_id').val();
                 var username = $('#username').val();
@@ -106,20 +120,23 @@
                     },
                     success: function (response) {
                         console.log("response",response);
-                        if (response == username ) {
+                        if (response.toLowerCase() === username.toLowerCase() ) {
                           if ( window.history.replaceState ) {
                                   Swal.fire({
-                                title: "Successfully Booked Service",
-                                text: username,
+                                text: "Hello" +" "+ username,
+                                title: "Your service has been successfully booked. Our team will contact you shortly.",
                                 icon: "success"
-                              });
-                            window.history.replaceState( null, null, window.location.href );
+                              }).then((result) => {
+                                // Page reload after the user closes the popup
+                                location.reload();  // This will reload the page
+                            });
+                            
                           }
                         } else {
                           Swal.fire({
                           icon: "error",
-                          title: "Oops...",
-                          text: response + "   is required",
+                          title: "Oops... "+ response,
+                          text:  "Please fill in all required fields. All fields are necessary to process your request.",
                           footer: 'Why do I have this issue?'
                         });
                         }
@@ -128,7 +145,7 @@
                   
                 })
             });
-                 $('#contact_user').validate({
+$('#contact_user').validate({
       rules:{
         uname:{
           required:true
@@ -138,7 +155,8 @@
           },
           phone:{
               required:true,
-              minlength:10
+              minlength:10,
+              maxlength:10
           }
       }
     
